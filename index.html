@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Swiggy Clone</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/assests/logo.png" alt="">
+        </div>
+        <div class="location">
+            <div class="logosep"></div>
+            <img src="/assests/location-img.png" alt="">
+            <div class="locationSelect">Setup your precise location</div>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+        </div>
+        <div class="searchBar">
+            <input placeholder="Search for restaudent and foods" type="text">
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+        </div>
+        <div class="profile">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+
+        </div>
+    </header>
+
+
+    <div class="Homeslider">
+        <div class="headingTitle">
+            <span class="headingh1">Order Food </span><span class="headingh1">Online in Delhi</span>
+            <svg width="50%" height="100%" viewBox="0 0 78 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25939C27 -0.240624 53.5 -0.2406 77 4.25939" stroke="#F15700" stroke-width="1.5"></path>
+            </svg>
+        </div>
+        <div class="headerImg">
+            <img src="/assests/dweb_header.avif" alt="">
+        </div>
+    </div>
+
+    <div class="categorySection">
+        <div class="categoryHeading">
+            <h2>What's on your mind?</h2>
+            <div class="catBtn">
+                <Button> <i class="fa fa-arrow-left" aria-hidden="true"></i> </Button>
+                <Button> <i class="fa fa-arrow-right" aria-hidden="true"></i></Button>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <section class="customer-logos slider">
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png">
+                </div>
+                <div class="slide"><img
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029852/PC_Creative%20refresh/3D_bau/banners_new/Momos.png">
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+
+    <div class="SecLineMargin">
+        <div class="Lineeee"></div>
+    </div>
+
+
+    <div class="topRestaurentSec">
+        <div class="restauSmallSec">
+            <div class="topRestaurentSecTitle categoryHeading">
+                <h2>What's on your mind?</h2>
+                <div class="catBtn">
+                    <Button> <i class="fa fa-arrow-left" aria-hidden="true"></i> </Button>
+                    <Button> <i class="fa fa-arrow-right" aria-hidden="true"></i></Button>
+                </div>
+            </div>
+        </div>
+        <div class="topRestaurentSecList">
+            <section class="customer-logos1">
+                <div class="slideRestau">
+                    <div class="img"><img
+                            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/zhasj3aa1edjyk68bklx"
+                            alt="">
+                    </div>
+                    <div class="restTitle">Domino's Delhi</div>
+                    <div class="restRateTime">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="ratingTime">4.2 • 25 mins</div>
+                    </div>
+                    <div class="restAddress">
+                        Pizzas, Italian, Pastas, Desserts East Patel Nagar
+                    </div>
+
+
+                </div>
+                <div class="slideRestau">
+                    <div class="img"><img
+                            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/zk3cneuiyjqbxoaunpuh"
+                            alt="">
+                    </div>
+                    <div class="restTitle">La Pino'z Pizza</div>
+                    <div class="restRateTime">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="ratingTime">4.1 • 15 mins</div>
+                    </div>
+                    <div class="restAddress">
+                        Pizzas, Pastas, Italian, Desserts, Beverages Rajouri Garden </div>
+                </div>
+                <div class="slideRestau">
+                    <div class="img"><img
+                            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf"
+                            alt="">
+                    </div>
+                    <div class="restTitle">Burger King</div>
+                    <div class="restRateTime">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="ratingTime">4.6 • 45 mins</div>
+                    </div>
+                    <div class="restAddress">
+                        Burgers, American
+                        Shadipur
+                    </div>
+                </div>
+
+
+                <div class="slideRestau">
+                    <div class="img"><img
+                            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/63178e3e64d503a479f2a2048a474552"
+                            alt="">
+                    </div>
+                    <div class="restTitle">Subway</div>
+                    <div class="restRateTime">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="ratingTime">4.7 • 15 mins</div>
+                    </div>
+                    <div class="restAddress">
+                        Salads, Snacks, Desserts, Beverages
+                        Old Rajinder Nagar , CP </div>
+                </div>
+
+
+
+
+
+            </section>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <div class="SecLineMargin">
+        <div class="Lineeee"></div>
+    </div>
+
+
+
+    <div class="homeHeading">
+        <div class="EheadingTitle">Restaurants with online food delivery in Delhi
+        </div>
+    </div>
+    <div class="bestRestDelhi">
+
+        <div class="resCateg">
+            <div class="RestCatBtn">Filter <i class="fa fa-filter" aria-hidden="true"></i>
+            </div>
+            <div class="RestCatBtn">Sort By<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            <div class="RestCatBtn">Fast Delivery</div>
+            <div class="RestCatBtn">New On Swiggy</div>
+            <div class="RestCatBtn">Rating 4.0+</div>
+            <div class="RestCatBtn">Pur Veg</div>
+            <div class="RestCatBtn">Offers</div>
+            <div class="RestCatBtn">Rss.300-600</div>
+            <div class="RestCatBtn">Less Then Rs.300</div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="famousRestList">
+        <div class="FavRestList4">
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="./assests/pizzahut.avif" alt="">
+                    <div class="FavRestImgOffer">80% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName"> Pizza Hut</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.1 • 15 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    Salads, Snacks, Desserts, Beverages
+                    Old Rajinder Nagar , CP
+                </div>
+            </div>
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/64fd45fd9f44c1737bc446e470bed666"
+                        alt="">
+                    <div class="FavRestImgOffer">70% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName">Wow's Momo</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.6 • 20 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    Tibetan, Healthy Food Rajouri Garden
+                </div>
+            </div>
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f01666ac73626461d7455d9c24005cd4"
+                        alt="">
+                    <div class="FavRestImgOffer">40% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName"> KFC</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.1 • 15 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    KFC 5th Floor, American
+                    Punjabi Bagh
+                </div>
+            </div>
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/4f9afba9112485d52b7c706ff07d0b97"
+                        alt="">
+                    <div class="FavRestImgOffer">40% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName"> Chicago</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.0 • 35 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    Rohini East, Sector 20
+                    Old Rajinder Nagar
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="FavRestList4">
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ea5e6f3521a1b76de25f43be8b43b4bd"
+                        alt="">
+                    <div class="FavRestImgOffer">80% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName"> Pizza Hut</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.1 • 15 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    Salads, Snacks, Desserts, Beverages
+                    Old Rajinder Nagar , CP
+                </div>
+            </div>
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/lmkhxefz9kqcjt6zugk1"
+                        alt="">
+                    <div class="FavRestImgOffer">70% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName">Wow's Momo</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.6 • 20 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    Tibetan, Healthy Food Rajouri Garden
+                </div>
+            </div>
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/3cbe202ccd14aad283133f1e99d70050"
+                        alt="">
+                    <div class="FavRestImgOffer">40% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName"> KFC</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.1 • 15 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    KFC 5th Floor, American
+                    Punjabi Bagh
+                </div>
+            </div>
+
+            <div class="FamousRestDiv">
+                <div class="FavRestImg">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf"
+                        alt="">
+                    <div class="FavRestImgOffer">40% OFF Upto 80</div>
+                </div>
+                <div class="FavRestName"> Chicago</div>
+                <div class="FavRestRatRev">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="ratingTime">4.0 • 35 mins</div>
+                </div>
+                <div class="FavRestAddress">
+                    Rohini East, Sector 20
+                    Old Rajinder Nagar
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="RestListShowMore">
+            <div class="showmore">Show More...</div>
+        </div>
+    </div>
+
+    <div class="SecLineMargin">
+        <div class="Lineeee"></div>
+    </div>
+
+    <div class="homeHeading">
+        <div class="EheadingTitle">Food culture in Delhi
+        </div>
+    </div>
+
+
+    <div class="foodCul">
+        <div class="foodculdetail">
+            <div class="foodculheading">Order Delicious Food Online in Delhi from Swiggy</div>
+            <div class="foodculpara">Hunger has no excuses. Your cravings must be satisfied, whether it's early morning
+                or late night. Don't let your cravings go in vain. Place your online food order in Delhi with Swiggy and
+                be assured of timely delivery. The capital city of India has countless restaurants near you that deliver
+                piping hot, lip-smacking cuisines.
+
+                Swiggy lets you order your favourite food online in Delhi from top-rated restaurants, cafes, and food
+                joints from your local vicinity. Don’t let the plethora of options confuse you.</div>
+            <div class="foodculReadmore">See More..<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+        </div>
+
+    </div>
+
+    <div class="SecLineMargin">
+        <div class="Lineeee"></div>
+    </div>
+
+    <div class="homeHeading">
+        <div class="EheadingTitle">
+            Explore localities in and around Delhi
+        </div>
+    </div>
+
+
+
+    <div class="toploc">
+        <div class="toplocDetail">
+            <div class="toplocaList4">
+                <div class="toploclisting">Fatehpur Beri</div>
+                <div class="toploclisting">Matiala</div>
+                <div class="toploclisting">Bakkarwala</div>
+                <div class="toploclisting">Mundka</div>
+            </div>
+            <div class="toplocaList4">
+                <div class="toploclisting">Fatehpur Beri</div>
+                <div class="toploclisting">Satbari</div>
+                <div class="toploclisting">Hirakunda</div>
+                <div class="toploclisting">Peeragarhi</div>
+            </div>
+            <div class="toplocaList4">
+                <div class="toploclisting">Nilothi</div>
+                <div class="toploclisting">Jawala Heri</div>
+                <div class="toploclisting">Tikri Kalan</div>
+                <div class="toploclisting">Show More<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="SecLineMargin">
+        <div class="Lineeee"></div>
+    </div>
+
+    <div class="homeHeading">
+        <div class="EheadingTitle">
+            Cuisine Restaurants in Nilothi
+        </div>
+    </div>
+
+
+
+    <div class="toploc">
+        <div class="toplocDetail">
+            <div class="toplocaList4">
+                <div class="toploclisting">Fatehpur Beri</div>
+                <div class="toploclisting">Matiala</div>
+                <div class="toploclisting">Bakkarwala</div>
+                <div class="toploclisting">Mundka</div>
+            </div>
+            <div class="toplocaList4">
+                <div class="toploclisting">Fatehpur Beri</div>
+                <div class="toploclisting">Satbari</div>
+                <div class="toploclisting">Hirakunda</div>
+                <div class="toploclisting">Peeragarhi</div>
+            </div>
+            <div class="toplocaList4">
+                <div class="toploclisting">Nilothi</div>
+                <div class="toploclisting">Jawala Heri</div>
+                <div class="toploclisting">Tikri Kalan</div>
+                <div class="toploclisting">Show More<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="downapp">
+        <div class="downappsec">
+            <div class="downapptitle">For better experience,download the Swiggy app now</div>
+            <div class="image">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png"
+                    alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footersec">
+            <div class="footercol">
+                <img src="./assests/Swiggy_logo.svg.png" alt="">
+                <div class="footercopy">© 2024 Bundl Technologies Pvt. Ltd</div>
+            </div>
+            <div class="footercol">
+                <div class="footerheading">Company</div>
+                <div class="footerconlist">
+                    <ul>
+                        <li>About</li>
+                        <li>Careers</li>
+                        <li>Team</li>
+                        <li>Swiggy One</li>
+                        <li>Swiggy Instamart</li>
+                        <li>Swiggy Genie</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footercol footlegal">
+                <div class="footerheading">Contact us</div>
+                <div class="footerconlist">
+                    <ul>
+                        <li>Help & Support</li>
+                        <li>Partner with us</li>
+                        <li>Ride with us</li>
+                        <li>Swiggy One</li>
+                        <li>Swiggy Instamart</li>
+                        <li>Swiggy Genie</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footercol">
+
+                <div class="footerheading">We deliver to:</div>
+                <div class="footerconlist">
+                    <ul>
+                        <li>Bangalore</li>
+                        <li>Gurgaon</li>
+                        <li>Hyderabad</li>
+                        <li>Delhi</li>
+                        <li>Mumbai</li>
+                        <li>Pune</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
